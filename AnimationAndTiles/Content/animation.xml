@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:b7358abc6dfee5dc818c01f16bb2185a:68825f886011d56f75e2f1bfac547655:f096af8f9f4ee2cbcef9bc317ff91bd8$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+-->
+<TextureAtlas imagePath="animation.png" width="422" height="28">
+    <sprite n="animation.png" x="2" y="2" w="208" h="24" pX="0.5" pY="0.5" oX="2" oY="2" oW="212" oH="28"/>
+    <sprite n="idle_down.png" x="212" y="2" w="16" h="24" pX="0.5" pY="0.5" oX="1" oY="2" oW="18" oH="28"/>
+    <sprite n="idle_left.png" x="266" y="2" w="15" h="24" pX="0.5" pY="0.5" oX="2" oY="5" oW="19" oH="31"/>
+    <sprite n="idle_right.png" x="283" y="2" w="15" h="24" pX="0.5" pY="0.5" oX="3" oY="9" oW="21" oH="35"/>
+    <sprite n="idle_up.png" x="334" y="2" w="16" h="23" pX="0.5" pY="0.5" oX="3" oY="0" oW="20" oH="25"/>
+    <sprite n="walk_down_1.png" x="230" y="2" w="16" h="24" pX="0.5" pY="0.5" oX="1" oY="2" oW="18" oH="28"/>
+    <sprite n="walk_down_2.png" x="248" y="2" w="16" h="24" pX="0.5" pY="0.5" oX="1" oY="3" oW="17" oH="28"/>
+    <sprite n="walk_left_1.png" x="352" y="2" w="16" h="23" pX="0.5" pY="0.5" oX="1" oY="2" oW="18" oH="26"/>
+    <sprite n="walk_left_2.png" x="388" y="2" w="15" h="23" pX="0.5" pY="0.5" oX="2" oY="3" oW="20" oH="28"/>
+    <sprite n="walk_right_1.png" x="370" y="2" w="16" h="23" pX="0.5" pY="0.5" oX="2" oY="3" oW="21" oH="28"/>
+    <sprite n="walk_right_2.png" x="405" y="2" w="15" h="23" pX="0.5" pY="0.5" oX="2" oY="2" oW="18" oH="27"/>
+    <sprite n="walk_up_1.png" x="300" y="2" w="15" h="24" pX="0.5" pY="0.5" oX="2" oY="2" oW="20" oH="27"/>
+    <sprite n="walk_up_2.png" x="317" y="2" w="15" h="24" pX="0.5" pY="0.5" oX="3" oY="2" oW="21" oH="28"/>
+</TextureAtlas>

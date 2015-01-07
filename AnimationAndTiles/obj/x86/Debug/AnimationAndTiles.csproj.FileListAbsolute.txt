@@ -1,0 +1,8 @@
+C:\Users\Scrapy\Documents\GitHub\Projekt_12.01.2015\AnimationAndTiles\bin\WindowsGL\Debug\AnimationAndTiles.exe
+C:\Users\Scrapy\Documents\GitHub\Projekt_12.01.2015\AnimationAndTiles\bin\WindowsGL\Debug\AnimationAndTiles.pdb
+C:\Users\Scrapy\Documents\GitHub\Projekt_12.01.2015\AnimationAndTiles\bin\WindowsGL\Debug\Lidgren.Network.dll
+C:\Users\Scrapy\Documents\GitHub\Projekt_12.01.2015\AnimationAndTiles\bin\WindowsGL\Debug\MonoGame.Framework.dll
+C:\Users\Scrapy\Documents\GitHub\Projekt_12.01.2015\AnimationAndTiles\bin\WindowsGL\Debug\OpenTK.dll
+C:\Users\Scrapy\Documents\GitHub\Projekt_12.01.2015\AnimationAndTiles\bin\WindowsGL\Debug\Tao.Sdl.dll
+C:\Users\Scrapy\Documents\GitHub\Projekt_12.01.2015\AnimationAndTiles\obj\x86\Debug\AnimationAndTiles.exe
+C:\Users\Scrapy\Documents\GitHub\Projekt_12.01.2015\AnimationAndTiles\obj\x86\Debug\AnimationAndTiles.pdb
