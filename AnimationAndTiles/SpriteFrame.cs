@@ -8,7 +8,7 @@ namespace AnimationAndTiles
 {
     class SpriteFrame
     {
-        public string name;
+        public string Name;
         public Rectangle Bounds = new Rectangle();
     }
 }
