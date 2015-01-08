@@ -10,9 +10,9 @@ namespace AnimationAndTiles
 {
     class SpriteAnimation
     {
-        private Vector2 Position;
+        public Vector2 Position {get; set;}
         private string name;
-        private int FrameDelay;
+        public int FrameDelay;
         private Texture2D animationImage;
         private List<SpriteFrame> frames = new List<SpriteFrame>();
         private List<SpriteFrame> currentFrame = new List<SpriteFrame>();

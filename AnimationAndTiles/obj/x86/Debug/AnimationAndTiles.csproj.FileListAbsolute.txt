@@ -6,3 +6,14 @@ C:\Users\Scrapy\Documents\GitHub\Projekt_12.01.2015\AnimationAndTiles\bin\Window
 C:\Users\Scrapy\Documents\GitHub\Projekt_12.01.2015\AnimationAndTiles\bin\WindowsGL\Debug\Tao.Sdl.dll
 C:\Users\Scrapy\Documents\GitHub\Projekt_12.01.2015\AnimationAndTiles\obj\x86\Debug\AnimationAndTiles.exe
 C:\Users\Scrapy\Documents\GitHub\Projekt_12.01.2015\AnimationAndTiles\obj\x86\Debug\AnimationAndTiles.pdb
+C:\Users\Scr4py\Documents\GitHub\Projekt_12.01.2015\AnimationAndTiles\obj\x86\Debug\AnimationAndTiles.exe
+C:\Users\Scr4py\Documents\GitHub\Projekt_12.01.2015\AnimationAndTiles\obj\x86\Debug\AnimationAndTiles.pdb
+C:\Users\Scr4py\Documents\GitHub\Projekt_12.01.2015\AnimationAndTiles\bin\WindowsGL\Debug\AnimationAndTiles.exe
+C:\Users\Scr4py\Documents\GitHub\Projekt_12.01.2015\AnimationAndTiles\bin\WindowsGL\Debug\AnimationAndTiles.pdb
+C:\Users\Scr4py\Documents\GitHub\Projekt_12.01.2015\AnimationAndTiles\bin\WindowsGL\Debug\Lidgren.Network.dll
+C:\Users\Scr4py\Documents\GitHub\Projekt_12.01.2015\AnimationAndTiles\bin\WindowsGL\Debug\MonoGame.Framework.dll
+C:\Users\Scr4py\Documents\GitHub\Projekt_12.01.2015\AnimationAndTiles\bin\WindowsGL\Debug\OpenTK.dll
+C:\Users\Scr4py\Documents\GitHub\Projekt_12.01.2015\AnimationAndTiles\bin\WindowsGL\Debug\Tao.Sdl.dll
+C:\Users\Scr4py\Documents\GitHub\Projekt_12.01.2015\AnimationAndTiles\obj\x86\Debug\AnimationAndTiles.csprojResolveAssemblyReference.cache
+C:\Users\Scr4py\Documents\GitHub\Projekt_12.01.2015\AnimationAndTiles\bin\WindowsGL\Debug\Content\animation.png
+C:\Users\Scr4py\Documents\GitHub\Projekt_12.01.2015\AnimationAndTiles\bin\WindowsGL\Debug\Content\animation.xml
