@@ -18,6 +18,10 @@ C:\Users\Scr4py\Documents\GitHub\Projekt_12.01.2015\AnimationAndTiles\obj\x86\De
 C:\Users\Scr4py\Documents\GitHub\Projekt_12.01.2015\AnimationAndTiles\bin\WindowsGL\Debug\Content\animation.png
 C:\Users\Scr4py\Documents\GitHub\Projekt_12.01.2015\AnimationAndTiles\bin\WindowsGL\Debug\Content\animation.xml
 C:\Users\Scrapy\Documents\GitHub\Projekt_12.01.2015\AnimationAndTiles\obj\x86\Debug\AnimationAndTiles.csprojResolveAssemblyReference.cache
+<<<<<<< HEAD
+C:\Users\Scrapy\Documents\GitHub\Projekt_12.01.2015\AnimationAndTiles\bin\WindowsGL\Debug\Content\Brawler_Evo_2.png
+C:\Users\Scrapy\Documents\GitHub\Projekt_12.01.2015\AnimationAndTiles\bin\WindowsGL\Debug\Content\Brawler_Evo_2.xml
+=======
 C:\Users\Scrapy\Documents\GitHub\Projekt_12.01.2015\AnimationAndTiles\bin\WindowsGL\Debug\Content\link_animation.png
 C:\Users\Scrapy\Documents\GitHub\Projekt_12.01.2015\AnimationAndTiles\bin\WindowsGL\Debug\Content\link_animation.xml
 C:\Users\Lucas\Documents\GitHub\Projekt_12.01.2015\AnimationAndTiles\bin\WindowsGL\Debug\AnimationAndTiles.exe
@@ -29,5 +33,9 @@ C:\Users\Lucas\Documents\GitHub\Projekt_12.01.2015\AnimationAndTiles\bin\Windows
 C:\Users\Lucas\Documents\GitHub\Projekt_12.01.2015\AnimationAndTiles\obj\x86\Debug\AnimationAndTiles.csprojResolveAssemblyReference.cache
 C:\Users\Lucas\Documents\GitHub\Projekt_12.01.2015\AnimationAndTiles\obj\x86\Debug\AnimationAndTiles.exe
 C:\Users\Lucas\Documents\GitHub\Projekt_12.01.2015\AnimationAndTiles\obj\x86\Debug\AnimationAndTiles.pdb
+<<<<<<< HEAD
 C:\Users\Lucas\Documents\GitHub\Projekt_12.01.2015\AnimationAndTiles\bin\WindowsGL\Debug\Content\link_animation.png
 C:\Users\Lucas\Documents\GitHub\Projekt_12.01.2015\AnimationAndTiles\bin\WindowsGL\Debug\Content\link_animation.xml
+=======
+>>>>>>> origin/master
+>>>>>>> origin/master
