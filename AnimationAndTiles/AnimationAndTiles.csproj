@@ -59,12 +59,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Content Include="Content\Brawler_Evo_2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\Brawler_Evo_2.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+=======
+    <Content Include="Content\link_animation.png" />
+    <Content Include="Content\link_animation.xml" />
+>>>>>>> origin/master
     <Content Include="Icon.ico" />
   </ItemGroup>
   <ItemGroup />
