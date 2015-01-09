@@ -33,7 +33,6 @@ namespace AnimationAndTiles
         }
         public void Draw(SpriteBatch spritebatch)
         {
-            
             this.SpriteAnimation.Draw(spritebatch);
         }
 
