@@ -40,7 +40,7 @@ namespace AnimationAndTiles
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             this.spriteAnimation = new SpriteAnimation("link_animation", Content.RootDirectory + "/link_animation.xml", Content.Load<Texture2D>("link_animation"));
-            this.spriteAnimation.FrameDelay = 200;
+            this.spriteAnimation.FrameDelay = 2000;
             this.player.SpriteAnimation = spriteAnimation;
         }
         

@@ -43,7 +43,7 @@ namespace AnimationAndTiles
                     string name = reader.GetAttribute("n");
 
                     //Wenn das n vorhanden ist
-                    if (name.Contains(this.name))
+                    if (name.Contains(name))
                     {
                         SpriteFrame spriteframe = new SpriteFrame();
                         spriteframe.Name = name;
