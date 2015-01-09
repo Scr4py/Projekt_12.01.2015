@@ -20,6 +20,7 @@ namespace AnimationAndTiles
         SpriteBatch spriteBatch;
 
         Player player = new Player();
+        Map map = new Map();
         SpriteAnimation spriteAnimation;
 
         public Game1()
@@ -39,8 +40,10 @@ namespace AnimationAndTiles
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
+            this.map.TileSheet = Content.Load<Texture2D>("Tiles");
+            this.map.LoadMapFromImage(Content.Load<Texture2D>("Map_2"));
             this.spriteAnimation = new SpriteAnimation("Brawler_Evo_2", Content.RootDirectory + "/Brawler_Evo_2.xml", Content.Load<Texture2D>("Brawler_Evo_2"));
-            this.spriteAnimation.FrameDelay = 200;
+            this.spriteAnimation.FrameDelay = 2000;
             this.player.SpriteAnimation = spriteAnimation;
         }
         
@@ -61,6 +64,7 @@ namespace AnimationAndTiles
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
             spriteBatch.Begin();
+            this.map.RenderMap(spriteBatch);
             this.player.Draw(spriteBatch);
             spriteBatch.End();
             base.Draw(gameTime);

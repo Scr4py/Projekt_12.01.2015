@@ -31,3 +31,5 @@ C:\Users\Scrapy\Desktop\Projekt_12.01.2015\AnimationAndTiles\bin\WindowsGL\Debug
 C:\Users\Scrapy\Desktop\Projekt_12.01.2015\AnimationAndTiles\obj\x86\Debug\AnimationAndTiles.csprojResolveAssemblyReference.cache
 C:\Users\Scrapy\Documents\GitHub\Projekt_12.01.2015\AnimationAndTiles\bin\WindowsGL\Debug\Content\Brawler_Evo_2.png
 C:\Users\Scrapy\Documents\GitHub\Projekt_12.01.2015\AnimationAndTiles\bin\WindowsGL\Debug\Content\Brawler_Evo_2.xml
+C:\Users\Scrapy\Documents\GitHub\Projekt_12.01.2015\AnimationAndTiles\bin\WindowsGL\Debug\Content\Map_2.bmp
+C:\Users\Scrapy\Documents\GitHub\Projekt_12.01.2015\AnimationAndTiles\bin\WindowsGL\Debug\Content\Tiles.jpg

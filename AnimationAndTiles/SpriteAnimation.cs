@@ -109,7 +109,8 @@ namespace AnimationAndTiles
             if (this.currentFrame.Count != 0)
             {
                 Rectangle source = this.CalculateSource();
-                spriteBatch.Draw(this.animationImage, this.Position, source, Color.White);
+                Vector2 mapPosition = new Vector2(this.Position.X * Map.TileWidth, this.Position.Y * Map.TileHeight);
+                spriteBatch.Draw(this.animationImage,mapPosition, source, Color.White);
             }
         }
    }
