@@ -39,7 +39,7 @@ namespace AnimationAndTiles
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            this.spriteAnimation = new SpriteAnimation("Brawler_Evo_2", Content.RootDirectory + "/Brawler_Evo_2.xml", Content.Load<Texture2D>("Brawler_Evo_2"));
+            this.spriteAnimation = new SpriteAnimation("link_animation", Content.RootDirectory + "/link_animation.xml", Content.Load<Texture2D>("link_animation"));
             this.spriteAnimation.FrameDelay = 200;
             this.player.SpriteAnimation = spriteAnimation;
         }
