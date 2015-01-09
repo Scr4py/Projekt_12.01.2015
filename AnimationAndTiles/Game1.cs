@@ -19,6 +19,9 @@ namespace AnimationAndTiles
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
+        Player player = new Player();
+        SpriteAnimation spriteAnimation;
+
         public Game1()
             : base()
         {
@@ -35,6 +38,10 @@ namespace AnimationAndTiles
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
+
+            this.spriteAnimation = new SpriteAnimation("animation", Content.RootDirectory + "/animation.xml", Content.Load<Texture2D>("animation"));
+            this.spriteAnimation.FrameDelay = 200;
+            this.player.SpriteAnimation = spriteAnimation;
         }
         
         protected override void UnloadContent()
@@ -46,14 +53,16 @@ namespace AnimationAndTiles
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
-
+            this.player.Update(gameTime);
             base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-
+            spriteBatch.Begin();
+            this.player.Draw(spriteBatch);
+            spriteBatch.End();
             base.Draw(gameTime);
         }
     }
