@@ -24,6 +24,7 @@ namespace AnimationAndTiles
         public string state = Idle;
         public string direction = Down;
         
+        
         public void Update(GameTime gameTime)
         {
             this.PlayAnimation();

@@ -59,7 +59,6 @@ namespace AnimationAndTiles
                 Exit();
             this.player.Update(gameTime);
             ProcessInput();
-            
             base.Update(gameTime);
         }
 
@@ -74,40 +73,40 @@ namespace AnimationAndTiles
         }
         private void ProcessInput()
         {
-            KeyboardState keyboardState = Keyboard.GetState();
+            //KeyboardState keyboardState = Keyboard.GetState();
 
-            if (keyboardState.IsKeyDown(Keys.S))
-            {
-                this.player.direction = Player.Down;
-                this.player.state = Player.Walk;
+            //if (keyboardState.IsKeyDown(Keys.S))
+            //{
+            //    this.player.direction = Player.Down;
+            //    this.player.state = Player.Walk;
 
-                this.player.Position.Y++;
-            }
-            else if (keyboardState.IsKeyDown(Keys.W))
-            {
-                this.player.direction = Player.Up;
-                this.player.state = Player.Walk;
+            //    this.player.Position.Y++;
+            //}
+            //else if (keyboardState.IsKeyDown(Keys.W))
+            //{
+            //    this.player.direction = Player.Up;
+            //    this.player.state = Player.Walk;
 
-                this.player.Position.Y--;
-            }
-            else if (keyboardState.IsKeyDown(Keys.A))
-            {
-                this.player.direction = Player.Left;
-                this.player.state = Player.Walk;
+            //    this.player.Position.Y--;
+            //}
+            //else if (keyboardState.IsKeyDown(Keys.A))
+            //{
+            //    this.player.direction = Player.Left;
+            //    this.player.state = Player.Walk;
 
-                this.player.Position.X--;
-            }
-            else if (keyboardState.IsKeyDown(Keys.D))
-            {
-                this.player.direction = Player.Right;
-                this.player.state = Player.Walk;
+            //    this.player.Position.X--;
+            //}
+            //else if (keyboardState.IsKeyDown(Keys.D))
+            //{
+            //    this.player.direction = Player.Right;
+            //    this.player.state = Player.Walk;
 
-                this.player.Position.X++;
-            }
-            else
-            {
-                this.player.state = Player.Idle;
-            }
+            //    this.player.Position.X++;
+            //}
+            //else
+            //{
+            //    this.player.state = Player.Idle;
+            //}
 
             // Mouse
             MouseState mouseState = Mouse.GetState();
@@ -116,6 +115,22 @@ namespace AnimationAndTiles
                 Vector2 target = this.ConvertScreenToWorldPoint(mouseState.X, mouseState.Y);
                 Vector2 direction = target - this.player.Position;
                 this.MovePlayer(direction);
+                Console.WriteLine(string.Format("X: {0} Y: {1} MousestateX: {2} MousestateY: {3} Direction{4}",target.X,target.Y,mouseState.X,mouseState.Y,direction));
+                
+                //if (mouseState.X > mouseState.Y)
+                //{
+                //    this.player.direction = Player.Right;
+                //    this.player.state = Player.Walk;
+                //}
+                //if (mouseState.X < mouseState.Y)
+                //{
+                //    this.player.direction = Player.Left;
+                //    this.player.state = Player.Walk;
+                //}
+                //else
+                //{
+                //    this.player.state = Player.Idle;
+                //}
             }
         }
             private void MovePlayer(Vector2 moveDirection)
