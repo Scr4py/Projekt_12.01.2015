@@ -45,6 +45,7 @@ namespace AnimationAndTiles
             this.spriteAnimation = new SpriteAnimation("link", Content.RootDirectory + "/link.xml", Content.Load<Texture2D>("link"));
             this.spriteAnimation.FrameDelay = 200;
             this.player.SpriteAnimation = spriteAnimation;
+            
         }
 
         protected override void UnloadContent()
@@ -57,6 +58,8 @@ namespace AnimationAndTiles
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
             this.player.Update(gameTime);
+            ProcessInput();
+            
             base.Update(gameTime);
         }
 
@@ -69,7 +72,70 @@ namespace AnimationAndTiles
             spriteBatch.End();
             base.Draw(gameTime);
         }
-        
-        
+        private void ProcessInput()
+        {
+            KeyboardState keyboardState = Keyboard.GetState();
+
+            if (keyboardState.IsKeyDown(Keys.S))
+            {
+                this.player.direction = Player.Down;
+                this.player.state = Player.Walk;
+
+                this.player.Position.Y++;
+            }
+            else if (keyboardState.IsKeyDown(Keys.W))
+            {
+                this.player.direction = Player.Up;
+                this.player.state = Player.Walk;
+
+                this.player.Position.Y--;
+            }
+            else if (keyboardState.IsKeyDown(Keys.A))
+            {
+                this.player.direction = Player.Left;
+                this.player.state = Player.Walk;
+
+                this.player.Position.X--;
+            }
+            else if (keyboardState.IsKeyDown(Keys.D))
+            {
+                this.player.direction = Player.Right;
+                this.player.state = Player.Walk;
+
+                this.player.Position.X++;
+            }
+            else
+            {
+                this.player.state = Player.Idle;
+            }
+
+            // Mouse
+            MouseState mouseState = Mouse.GetState();
+            if (mouseState.LeftButton == ButtonState.Pressed)
+            {
+                Vector2 target = this.ConvertScreenToWorldPoint(mouseState.X, mouseState.Y);
+                Vector2 direction = target - this.player.Position;
+                this.MovePlayer(direction);
+            }
+        }
+            private void MovePlayer(Vector2 moveDirection)
+            {
+                Tile nextTile = this.map.GetTile(this.player.Position + moveDirection);
+                if (nextTile != null)
+                {
+                    if (nextTile.Type == Tile.Types.Path)
+                    {
+                    this.player.Move(moveDirection);
+                    }
+                }
+            }
+            
+        private Vector2 ConvertScreenToWorldPoint(int x, int y)
+        {
+            int tileX = x / Map.TileWidth;
+            int tileY = y / Map.TileHeight;
+
+            return new Vector2(tileX, tileY);
+        }
     }
 }
