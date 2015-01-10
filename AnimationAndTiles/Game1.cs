@@ -18,7 +18,6 @@ namespace AnimationAndTiles
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-
         Player player = new Player();
         Map map = new Map();
         SpriteAnimation spriteAnimation;
@@ -35,21 +34,22 @@ namespace AnimationAndTiles
         {
             base.Initialize();
         }
-        
+
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             this.map.TileSheet = Content.Load<Texture2D>("Tiles");
             this.map.LoadMapFromImage(Content.Load<Texture2D>("Map_2"));
-            this.spriteAnimation = new SpriteAnimation("Brawler_Evo_2", Content.RootDirectory + "/Brawler_Evo_2.xml", Content.Load<Texture2D>("Brawler_Evo_2"));
+            //this.spriteAnimation = new SpriteAnimation("Brawler_Evo_2", Content.RootDirectory + "/Brawler_Evo_2.xml", Content.Load<Texture2D>("Brawler_Evo_2"));
+            this.spriteAnimation = new SpriteAnimation("link", Content.RootDirectory + "/link.xml", Content.Load<Texture2D>("link"));
             this.spriteAnimation.FrameDelay = 200;
             this.player.SpriteAnimation = spriteAnimation;
         }
-        
+
         protected override void UnloadContent()
         {
-            
+
         }
 
         protected override void Update(GameTime gameTime)
@@ -69,7 +69,7 @@ namespace AnimationAndTiles
             spriteBatch.End();
             base.Draw(gameTime);
         }
-         
-       
+        
+        
     }
 }

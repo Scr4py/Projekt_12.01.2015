@@ -18,7 +18,7 @@ namespace AnimationAndTiles
         private List<SpriteFrame> currentFrame = new List<SpriteFrame>();
         private int currentFrameCount;
         private string currentAnimationName;
-        private float scale = 0.5f;
+     
 
         private float timer = 0;
 

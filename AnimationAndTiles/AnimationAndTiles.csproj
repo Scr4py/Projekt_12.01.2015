@@ -67,6 +67,12 @@
     <Content Include="Content\Brawler_Evo_2.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\link.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\link.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\Map_2.bmp">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

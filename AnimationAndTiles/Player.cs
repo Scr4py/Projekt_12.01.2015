@@ -10,19 +10,20 @@ namespace AnimationAndTiles
 {
     class Player
     {
-        private const string Down = "Down";
-        private const string Up = "Up";
-        private const string Left = "Left";
-        private const string Right = "Right";
+        public const string Down = "Down";
+        public const string Up = "Up";
+        public const string Left = "Left";
+        public const string Right = "Right";
 
-        private const string Idle = "Idle";
-        private const string Walk = "Walk";
+        public const string Idle = "Idle";
+        public const string Walk = "Walk";
 
         public SpriteAnimation SpriteAnimation { get; set;}
 
-        private Vector2 position = Vector2.Zero;
-        private string state = Idle;
-        private string direction = Down;
+        public Vector2 Position { get; private set; }
+        public Vector2 position = Vector2.Zero;
+        public string state = Idle;
+        public string direction = Down;
         
         public void Update(GameTime gameTime)
         {
@@ -72,6 +73,7 @@ namespace AnimationAndTiles
             {
                 this.state = Idle;
             }
+           
         }
 
         private void PlayAnimation()
