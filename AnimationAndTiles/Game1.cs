@@ -33,12 +33,12 @@ namespace AnimationAndTiles
         protected override void Initialize()
         {
             base.Initialize();
+            this.IsMouseVisible = true;
         }
 
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
-
             this.map.TileSheet = Content.Load<Texture2D>("Tiles");
             this.map.LoadMapFromImage(Content.Load<Texture2D>("Map_2"));
             //this.spriteAnimation = new SpriteAnimation("Brawler_Evo_2", Content.RootDirectory + "/Brawler_Evo_2.xml", Content.Load<Texture2D>("Brawler_Evo_2"));
@@ -73,87 +73,90 @@ namespace AnimationAndTiles
         }
         private void ProcessInput()
         {
-            //KeyboardState keyboardState = Keyboard.GetState();
+            MouseState MS = Mouse.GetState();
 
-            //if (keyboardState.IsKeyDown(Keys.S))
-            //{
-            //    this.player.direction = Player.Down;
-            //    this.player.state = Player.Walk;
+            Vector2 mousePosition = new Vector2(MS.X, MS.Y);
+            Vector2 direction = mousePosition - this.player.Position * 33;
 
-            //    this.player.Position.Y++;
-            //}
-            //else if (keyboardState.IsKeyDown(Keys.W))
-            //{
-            //    this.player.direction = Player.Up;
-            //    this.player.state = Player.Walk;
+            float distance = calculateDistance(mousePosition, this.player.Position, mousePosition);
+            this.player.velocity = Vector2.Zero;
 
-            //    this.player.Position.Y--;
-            //}
-            //else if (keyboardState.IsKeyDown(Keys.A))
-            //{
-            //    this.player.direction = Player.Left;
-            //    this.player.state = Player.Walk;
 
-            //    this.player.Position.X--;
-            //}
-            //else if (keyboardState.IsKeyDown(Keys.D))
-            //{
-            //    this.player.direction = Player.Right;
-            //    this.player.state = Player.Walk;
-
-            //    this.player.Position.X++;
-            //}
-            //else
-            //{
-            //    this.player.state = Player.Idle;
-            //}
-
-            // Mouse
-            MouseState mouseState = Mouse.GetState();
-            if (mouseState.LeftButton == ButtonState.Pressed)
+            if (direction != Vector2.Zero)
             {
-                Vector2 target = this.ConvertScreenToWorldPoint(mouseState.X, mouseState.Y);
-                Vector2 direction = target - this.player.Position;
-                this.MovePlayer(direction);
-                Console.WriteLine(string.Format("X: {0} Y: {1} MousestateX: {2} MousestateY: {3} ",target.X,target.Y,mouseState.X,mouseState.Y));
-
-                if ()
-                {
-                    this.player.direction = Player.Down;
-                    this.player.state = Player.Walk;
-                }
-                else if ()
-                {
-                    this.player.direction = Player.Up;
-                    this.player.state = Player.Walk;
-                }
-                else if ()
-                {
-                    this.player.direction = Player.Right;
-                    this.player.state = Player.Walk;
-                }
-                else if ()
-                {
-                    this.player.direction = Player.Left;
-                    this.player.state = Player.Walk;
-                }
-                if (mouseState.LeftButton == ButtonState.Released)
-                {
-                    this.player.state = Player.Idle;
-                }
+                direction.Normalize();
             }
-        }
-            private void MovePlayer(Vector2 moveDirection)
+            Tile nextTile = this.map.GetTile(this.player.Position + direction);
+
+            if (MS.LeftButton == ButtonState.Pressed && nextTile != null)
             {
-                Tile nextTile = this.map.GetTile(this.player.Position + moveDirection);
-                if (nextTile != null)
+                if (nextTile.Type == Tile.Types.Path)
                 {
-                    if (nextTile.Type == Tile.Types.Path)
+                    if (distance < this.player.baseSpeed)
                     {
-                    this.player.Move(moveDirection);
+                        this.player.velocity += direction * distance / 20;
+                    }
+                    else
+                    {
+                        this.player.velocity += direction * this.player.baseSpeed / 20;
                     }
                 }
             }
+
+            this.player.Position += this.player.velocity;
+        }
+
+        private float calculateDistance(Vector2 A, Vector2 B, Vector2 direction)
+        {
+            A = new Vector2(Math.Abs(A.X), Math.Abs(A.Y));
+            B = new Vector2(Math.Abs(B.X), Math.Abs(B.Y));
+
+            float yDiff, xDiff, distance;
+            yDiff = A.Y - B.Y;
+            xDiff = A.X - B.X;
+
+            AnimatePlayer(direction);
+
+            distance = (float)Math.Sqrt(Math.Pow(xDiff, 2) + Math.Pow(yDiff, 2));
+            return Math.Abs(distance);
+        }
+        private void AnimatePlayer(Vector2 direction)
+        {
+            float x = (this.player.Position.X * 33) - direction.X;
+            float y = (this.player.Position.Y * 33) - direction.Y;
+            Console.WriteLine(x);
+            Console.WriteLine(y);
+            if (x > y)
+            {
+                if (x < 0)
+                {
+                    this.player.state = Player.Walk;
+                    this.player.direction = Player.Down;
+                }
+                else
+                {
+                    this.player.state = Player.Walk;
+                    this.player.direction = Player.Left;
+                }
+            }
+            else if (y > x)
+            {
+                if (y < 0)
+                {
+                    this.player.state = Player.Walk;
+                    this.player.direction = Player.Right;
+                }
+                else
+                {
+                    this.player.state = Player.Walk;
+                    this.player.direction = Player.Up;
+                }
+            }
+            else
+            {
+                this.player.state = Player.Idle;
+            }
+        }
             
         private Vector2 ConvertScreenToWorldPoint(int x, int y)
         {

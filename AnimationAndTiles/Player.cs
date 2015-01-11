@@ -20,9 +20,12 @@ namespace AnimationAndTiles
 
         public SpriteAnimation SpriteAnimation { get; set;}
 
-        public Vector2 Position = Vector2.Zero;
-        public string state = Idle;
-        public string direction = Down;
+        public Vector2 Position = new Vector2(1,1);
+        public string state = Walk;
+        public string direction = Up;
+
+        public int baseSpeed = 1;
+        public Vector2 velocity;
         
         
         public void Update(GameTime gameTime)
