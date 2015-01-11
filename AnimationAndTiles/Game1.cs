@@ -115,22 +115,32 @@ namespace AnimationAndTiles
                 Vector2 target = this.ConvertScreenToWorldPoint(mouseState.X, mouseState.Y);
                 Vector2 direction = target - this.player.Position;
                 this.MovePlayer(direction);
-                Console.WriteLine(string.Format("X: {0} Y: {1} MousestateX: {2} MousestateY: {3} Direction{4}",target.X,target.Y,mouseState.X,mouseState.Y,direction));
-                
-                //if (mouseState.X > mouseState.Y)
-                //{
-                //    this.player.direction = Player.Right;
-                //    this.player.state = Player.Walk;
-                //}
-                //if (mouseState.X < mouseState.Y)
-                //{
-                //    this.player.direction = Player.Left;
-                //    this.player.state = Player.Walk;
-                //}
-                //else
-                //{
-                //    this.player.state = Player.Idle;
-                //}
+                Console.WriteLine(string.Format("X: {0} Y: {1} MousestateX: {2} MousestateY: {3} ",target.X,target.Y,mouseState.X,mouseState.Y));
+
+                if ()
+                {
+                    this.player.direction = Player.Down;
+                    this.player.state = Player.Walk;
+                }
+                else if ()
+                {
+                    this.player.direction = Player.Up;
+                    this.player.state = Player.Walk;
+                }
+                else if ()
+                {
+                    this.player.direction = Player.Right;
+                    this.player.state = Player.Walk;
+                }
+                else if ()
+                {
+                    this.player.direction = Player.Left;
+                    this.player.state = Player.Walk;
+                }
+                if (mouseState.LeftButton == ButtonState.Released)
+                {
+                    this.player.state = Player.Idle;
+                }
             }
         }
             private void MovePlayer(Vector2 moveDirection)
