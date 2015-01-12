@@ -124,8 +124,6 @@ namespace AnimationAndTiles
         {
             float x = (this.player.Position.X * 33) - direction.X;
             float y = (this.player.Position.Y * 33) - direction.Y;
-            Console.WriteLine(x);
-            Console.WriteLine(y);
             if (x > y)
             {
                 if (x < 0)
